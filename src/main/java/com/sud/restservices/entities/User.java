@@ -6,36 +6,36 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User {
-	
+
 	@Id
 	private Long id;
-	
-	@Column(name = "USER_NAME", length =50, nullable=false, unique=true)
+
+	@Column(name = "USER_NAME", length = 50, nullable = false, unique = true)
 	private String userName;
-	
-	@Column(name = "FIRST_NAME", length =50, nullable=false)
+
+	@Column(name = "FIRST_NAME", length = 50, nullable = false)
 	private String firstName;
-	
-	@Column(name = "LAST_NAME", length =50, nullable=false)
+
+	@Column(name = "LAST_NAME", length = 50, nullable = false)
 	private String lastName;
-	
-	@Column(name = "EMAIL", length =50, nullable=false)
+
+	@Column(name = "EMAIL", length = 50, nullable = false)
 	private String email;
-	
-	@Column(name = "ROLE", length =50, nullable=false)
+
+	@Column(name = "ROLE", length = 50, nullable = false)
 	private String role;
-	
-	@Column(name = "USER_SSN", length =50, nullable=false, unique=true)
+
+	@Column(name = "USER_SSN", length = 50, nullable = false, unique = true)
 	private String ssn;
 
 	public User() {
-		
+
 	}
 
 	public User(Long id, String userName, String firstName, String lastName, String email, String role, String ssn) {
-		
+
 		this.id = id;
 		this.userName = userName;
 		this.firstName = firstName;
@@ -106,9 +106,5 @@ public class User {
 		return "User [id=" + id + ", userName=" + userName + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", email=" + email + ", role=" + role + ", ssn=" + ssn + "]";
 	}
-	
-	
-	
-	
-	
+
 }
